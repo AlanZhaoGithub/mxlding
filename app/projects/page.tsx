@@ -1,0 +1,36 @@
+import projects from '@data/projects';
+import ProjectCard from '@components/ProjectCard';
+import Particles from '@/components/Particles';
+import Header from '@/components/Header';
+
+export default function ProjectsPage() {
+  return (
+    <div className="animate-[fade-in_1s_forwards]">
+      <Header></Header>
+      <Particles
+        className="absolute inset-0 -z-10 animate-pulse"
+        quantity={200}
+        staticity={10}
+      />
+      <Particles
+        className="absolute inset-0 -z-12 animate-[spin_50s_ease-in-out_infinite]"
+        quantity={200}
+        staticity={40}
+      />
+      <div className="pt-16 px-16">
+        <h2 className="text-3xl font-bold tracking-tight text-dark-text sm:text-4xl">
+          Projects
+        </h2>
+        <p className="mt-4 text-dark-text-secondary">
+          Some of the projects are from school and some are on my own time.
+        </p>
+        <div className="w-full h-px my-10 bg-zinc-800" />
+      </div>
+      <div className="grid grid-cols-1 p-4 gap-6 justify-items-center">
+        {projects.map((project) => (
+          <ProjectCard key={project.slug} project={project} />
+        ))}
+      </div>
+    </div>
+  );
+}
