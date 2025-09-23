@@ -14,17 +14,26 @@ const skills = [
 
 export default function AboutMe() {
   return (
-      <div className="hidden w-screen h-px animate-[fade-in_2s_forwards] md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0">
+    
+      <div className="hidden w-screen h-px animate-[fade-in_0.3s_forwards] md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0">
+          <Header></Header>
           <Particles
             className="absolute inset-0 -z-10 animate-pulse"
             quantity={100}
             staticity={40}
           />
-        <Header></Header>
+          <div className="pt-16 px-16">
+            <h2 className="text-3xl font-bold tracking-tight text-dark-text sm:text-4xl">
+              About Me
+            </h2>
+            <p className="mt-4 text-dark-text-secondary">
+              A quick introduction to me, my interests, and the things I’m passionate about.
+            </p>
+            <div className="w-full h-px my-10 bg-zinc-800" />
+          </div>
         <section id="about" className="py-16 px-4 md:px-16">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-8">
             <div className="flex-1">
-              <h2 className="text-3xl font-bold mb-6">About Me</h2>
               <p className="text-lg mb-4">
                 Hi, I’m <span className="font-semibold text-blue-accent">Alan Zi Lun Zhao</span>, 
                 a Computer Science graduate from the 

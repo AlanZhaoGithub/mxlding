@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 
 export default function ProjectsPage() {
   return (
-    <div className="animate-[fade-in_1s_forwards]">
+    <div className="animate-[fade-in_0.3s_forwards]">
       <Header></Header>
       <Particles
         className="absolute inset-0 -z-10 animate-pulse"
@@ -22,7 +22,8 @@ export default function ProjectsPage() {
           Projects
         </h2>
         <p className="mt-4 text-dark-text-secondary">
-          Some of the projects are from school and some are on my own time.
+          Here you’ll find projects ranging from class assignments to personal experiments, 
+          highlighting what I enjoy building and learning.
         </p>
         <div className="w-full h-px my-10 bg-zinc-800" />
       </div>

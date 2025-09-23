@@ -5,7 +5,7 @@ import Particles from '@/components/Particles';
 
 export default function BlogPage() {
   return (
-      <div className="animate-[fade-in_1s_forwards]">
+      <div className="animate-[fade-in_0.3s_forwards]">
         <Header></Header>
         <Particles
           className="absolute inset-0 -z-10 animate-pulse"
@@ -22,7 +22,8 @@ export default function BlogPage() {
             Blog
           </h2>
           <p className="mt-4 text-dark-text-secondary">
-            Here I write about various topics ranging from tech, things in life, or high-level concepts in league of legends.
+            Thoughts and insights on technology, life, and even some deep dives 
+            into high-level League of Legends concepts.          
           </p>
           <div className="w-full h-px my-10 bg-zinc-800" />
         </div>
