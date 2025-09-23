@@ -28,7 +28,7 @@ export default function Navbar() {
 
       <div className="md:hidden pt-4 bg-dark-bg">
         <button
-          className="absolute md:hidden hover:bg-light-bg hover:text-light-text left-4 top-4 rounded-md"
+          className="absolute md:hidden hover:bg-light-bg hover:text-light-text left-1 top-1 rounded-md"
           onClick={() => setIsOpen(true)}
         >
           {/* Hamburger Icon */}
@@ -56,7 +56,7 @@ export default function Navbar() {
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <button className="absolute top-4 left-4 hover:bg-light-bg hover:text-light-text rounded-md" onClick={() => setIsOpen(false)}>
+          <button className="absolute top-1 left-1 hover:bg-light-bg hover:text-light-text rounded-md" onClick={() => setIsOpen(false)}>
             <svg
               className="w-6 h-6"
               fill="none"
