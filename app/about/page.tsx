@@ -50,7 +50,7 @@ export default function AboutMe() {
             <div className="flex-1">
               <div className="mb-8 mx-auto md:hidden relative rounded-lg w-[100%] max-w-[400px] h-[400px] overflow-hidden">
                 <Image
-                  src="/placeholder1.jpg"
+                  src="placeholder1.jpg"
                   alt="Alan Zhao"
                   fill
                   className="object-cover"

@@ -1,57 +1,52 @@
 'use client';
+import Header from '@/components/Header';
+import Particles from '@/components/Particles';
+import Link from 'next/link';
 import { useState } from 'react';
+import { FaGit } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa6';
 
-export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+export default function Contact() {
+  return(
+    <div className="animate-[fade-in_0.3s_forwards]">
+        <Header></Header>
+        <Particles
+          className="absolute inset-0 -z-10 animate-pulse"
+          quantity={200}
+          staticity={10}
+        />
+        <div className="pt-16 px-8 md:px-16">
+          <h2 className="text-3xl font-bold tracking-tight text-dark-text md:text-4xl">
+            Contact
+          </h2>
+          <p className="mt-4 text-dark-text-secondary">
+            Feel free to reach out for collaborations, opportunities, or just to chat.      
+          </p>
+          <div className="w-full h-px my-10 bg-zinc-800" />
+        </div>
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+          <Link
+            href="mailto:zhaoalan01@gmail.com"
+            className="inline-flex transition-all duration-100 hover:text-blue-accent"
+            onClick={(e) => e.stopPropagation()}>
+            <FaEnvelope className="text-4xl" />
+          </Link>
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
-    setSubmitted(true);
-    // You can add API call here to send email or save to database
-  };
+          <Link
+            href="https://github.com/alanzhaogithub"
+            className="inline-flex transition-all duration-100 hover:text-blue-accent"
+            onClick={(e) => e.stopPropagation()}>
+            <FaGithub className="text-4xl" />
+          </Link>
 
-  return submitted ? (
-    <p className="text-green-600">Thank you! Your message has been sent.</p>
-  ) : (
-    <form onSubmit={handleSubmit} className="flex flex-col space-y-4 max-w-lg">
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-        className="border rounded-md p-2"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-        className="border rounded-md p-2"
-      />
-      <textarea
-        name="message"
-        placeholder="Your Message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-        className="border rounded-md p-2 h-32"
-      />
-      <button
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
-      >
-        Send Message
-      </button>
-    </form>
+          <Link
+            href="https://www.linkedin.com/in/alanzhao01/"
+            className="inline-flex transition-all duration-100 hover:text-blue-accent"
+            onClick={(e) => e.stopPropagation()}>
+            <FaLinkedin className="text-4xl" />
+          </Link>
+        </div>
+      </div>
   );
 }

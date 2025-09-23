@@ -41,7 +41,8 @@ const projects: Project[] = [
     slug: 'benchmarking-llms-with-rag-ir',
     description: 'A performance analysis of large language models w & w/out RAG-IR on the efficacy and accuracy of answering natural questions dataset.',
     imageUrl: 'placeholder2.jpg',
-    techStack: ['Python', 'HuggingFace'],
+    techStack: ['Python', 'HuggingFace', "NLTK"],
+    githubUrl: "https://github.com/minhasir/RAG-IRComparisons.git"
   },
   {
     title: 'Personal Portfolio Website',
