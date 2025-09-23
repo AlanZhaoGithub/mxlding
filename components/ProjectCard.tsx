@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: Props) {
       >
         <div className="relative w-full h-48 rounded-md overflow-hidden">
           <Image
-            src={project.imageUrl || '/404-not-found.jpg'}
+            src={project.imageUrl || '404-not-found.jpg'}
             alt={project.title}
             fill
             className="object-cover"

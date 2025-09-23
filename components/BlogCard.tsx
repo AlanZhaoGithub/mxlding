@@ -18,7 +18,7 @@ export default function BlogCard({ post }: Props) {
         
         <div className="relative w-full sm:w-1/3 h-40 sm:h-auto">
           <Image
-            src={post.image ? post.image : '/404-not-found.jpg'}
+            src={post.image ? post.image : '404-not-found.jpg'}
             alt={post.title}
             fill
             className="object-cover rounded-lg"
