@@ -1,18 +1,12 @@
 import type { NextConfig } from "next";
 
 
-const isProd = process.env.NODE_ENV === 'production';
-
-module.exports = { basePath: isProd ? '/mxlding/' : '', 
-  assetPrefix: isProd ? '/mxlding/' : '', 
-  images: { unoptimized: true, // GitHub Pages does not support Next.js image optimization 
-  }, };
-const nextConfig: NextConfig = {
-  /*
-  output: "export",
+const nextConfig = {
+  basePath: '/mxlding',
+  output: "export",  // <=== enables static exports
   reactStrictMode: true,
-  basePath: "/mxlding" 
-  */
 };
+
+module.exports = nextConfig;
 
 export default nextConfig;
