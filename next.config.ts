@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
   images: {unoptimized: true},
-  basePath: isProd ? '/mxlding/' : '',
-  assetPrefix: isProd ? '/mxlding/' : '',
+  basePath: isProd ? '/mxlding' : '',
+  assetPrefix: isProd ? '/mxlding' : '',
 };
 
 export default nextConfig;

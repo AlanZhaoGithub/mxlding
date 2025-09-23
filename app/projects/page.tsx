@@ -27,7 +27,7 @@ export default function ProjectsPage() {
         </p>
         <div className="w-full h-px my-10 bg-zinc-800" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 p-8 gap-8 justify-items-center">
+      <div className="grid grid -cols-1 md:grid-cols-3 p-8 gap-8 justify-items-center">
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project}/>
         ))}

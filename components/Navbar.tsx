@@ -13,9 +13,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav>
-      {/* Desktop Links */}
-        <ul className="flex items-center justify-center gap-4">
+    <nav className="flex">
+        <ul className="hidden md:flex items-center justify-center gap-4">
           {links.map((item) => (
             <Link
               key={item.href}
@@ -27,30 +26,57 @@ export default function Navbar() {
           ))}
         </ul>
 
-      {/* Mobile Hamburger */}
-      <div className="md:hidden">
+      <div className="md:hidden pt-4 bg-dark-bg">
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-gray-700 focus:outline-none"
+          className="absolute md:hidden hover:bg-light-bg hover:text-light-text left-4 top-4 rounded-md"
+          onClick={() => setIsOpen(true)}
         >
-          {isOpen ? '✕' : '☰'}
+          {/* Hamburger Icon */}
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
 
+        {/* Overlay */}
         {isOpen && (
-          <ul className="absolute right-4 mt-2 w-40 bg-white shadow-lg rounded-md py-2 flex flex-col space-y-2">
-            {links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className="block px-4 py-2 hover:bg-gray-100 rounded"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div
+            className="fixed inset-0 bg-black/50 z-40"
+            onClick={() => setIsOpen(false)}
+          />
         )}
+
+        <div
+          className={`flex fixed top-0 left-0 h-full w-1/2 bg-dark-bg shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <button className="absolute top-4 left-4 hover:bg-light-bg hover:text-light-text rounded-md" onClick={() => setIsOpen(false)}>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Links */}
+          <div className="flex grow flex-col items-center justify-center space-y-8 p-4">
+            <Link href="/" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Home</Link>
+            <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-blue-600">About</Link>
+            <Link href="/projects" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Projects</Link>
+            <Link href="/blog" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Blog</Link>
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-blue-600">Contact</Link>
+          </div>
+        </div>
       </div>
     </nav>
   );
