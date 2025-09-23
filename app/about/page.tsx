@@ -53,7 +53,7 @@ export default function AboutMe() {
             {/* Right: Optional Image */}
             <div className="hidden md:block relative rounded-lg w-[100%] max-w-[400px] h-[400px] overflow-hidden">
               <Image
-                src="/placeholder1.jpg"
+                src="/mxlding/placeholder1.jpg"
                 alt="Alan Zhao"
                 fill
                 className="object-cover"
