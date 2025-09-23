@@ -2,20 +2,13 @@ import blogPosts from "@/data/blog";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-
-interface BlogPostPageProps {
-  params: {
-    slug: string;
-  };
-}
-
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export default function BlogPost({ params }: BlogPostPageProps) {
+export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = blogPosts.find((p) => p.slug === params.slug);
 
   if (!post) return notFound();

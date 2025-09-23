@@ -55,11 +55,15 @@ export default function ProjectCard({ project }: Props) {
           ${expanded ? "max-h-[1000px] opacity-100 mt-2" : "max-h-0 opacity-0"}
         `}
       >
-        <Image
-          src={project.image}
-          alt={project.title}
-          className="rounded-md w-full h-48 object-cover"
-        />
+        <div className="relative w-full h-48 rounded-md overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
         <p className="mt-2 text-dark-text">{project.description}</p>
         <p className="mt-1 text-sm text-dark-text-secondary">
           Tech Stack: {project.techStack.join(', ')}

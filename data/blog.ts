@@ -7,7 +7,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'An introduction to Next.js and building a portfolio site.',
     content: 'This is the full content of the blog post. Replace it later with real content.',
     date: '2025-09-20',
-    image: 'placeholder1.jpg',
+    image: '/placeholder1.jpg',
     tags: ['JavaScript','Docker', 'Cassandra', 'Redis', 'AWS'],
   },
   {
@@ -16,7 +16,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Some useful tips for using TypeScript in your projects.',
     content: 'Full content of TypeScript Tips post goes here.',
     date: '2025-09-18',
-    image: 'placeholder2.jpg',
+    image: '/placeholder2.jpg',
   },
   {
     title: 'TailwindCSS Basics',
@@ -24,7 +24,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'A simple guide to using TailwindCSS effectively.',
     content: 'Full content for TailwindCSS Basics post.',
     date: '2025-09-15',
-    image: 'placeholder3.jpeg',
+    image: '/placeholder3.jpeg',
   },
   {
     title: 'League of Legends Basics',
