@@ -1,5 +1,4 @@
 import Particles from "@components/Particles";
-import Image from "next/image";
 import Link from "next/link";
 
 

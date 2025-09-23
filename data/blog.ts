@@ -2,10 +2,10 @@ import { BlogPost } from 'types/blog';
 
 const blogPosts: BlogPost[] = [
   {
-    title: 'First Post!',
+    title: 'First post!',
     slug: 'getting-started-with-nextjs',
     excerpt: 'An introduction to Next.js and building a portfolio site.',
-    content: 'HIhIHIHI',
+    content: 'This is the full content of the blog post. Replace it later with real content.',
     date: '2025-09-20',
     image: 'placeholder1.jpg',
     tags: ['JavaScript','Docker', 'Cassandra', 'Redis', 'AWS'],

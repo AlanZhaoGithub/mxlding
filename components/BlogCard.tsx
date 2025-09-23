@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { BlogPost } from '../types/blog';
+
 
 interface Props {
   post: BlogPost;
@@ -14,7 +16,7 @@ export default function BlogCard({ post }: Props) {
         cursor-pointer shadow-md hover:shadow-lg w-full max-w-4xl
         p-4">
       {post.image ? (
-        <img
+        <Image
           src={post.image}
           alt={post.title}
           className="

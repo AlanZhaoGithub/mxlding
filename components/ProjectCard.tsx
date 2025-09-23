@@ -2,10 +2,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Project } from '../types/project';
-import { FaAngleDown, FaGit } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
+import Image from 'next/image';
 
 
 interface Props {
@@ -54,7 +55,7 @@ export default function ProjectCard({ project }: Props) {
           ${expanded ? "max-h-[1000px] opacity-100 mt-2" : "max-h-0 opacity-0"}
         `}
       >
-        <img
+        <Image
           src={project.image}
           alt={project.title}
           className="rounded-md w-full h-48 object-cover"

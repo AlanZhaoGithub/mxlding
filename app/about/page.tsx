@@ -1,6 +1,6 @@
 import Particles from "@/components/Particles";
 import Header from "@/components/Header";
-
+import Image from "next/image";
 
 const skills = [
   "Python",
@@ -52,7 +52,7 @@ export default function AboutMe() {
 
             {/* Right: Optional Image */}
             <div className="flex-1 hidden md:block">
-              <img
+              <Image
                 src="placeholder1.jpg"
                 alt="Alan Zhao"
                 className="rounded-lg shadow-lg"
