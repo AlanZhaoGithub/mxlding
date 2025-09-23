@@ -20,11 +20,14 @@ export default function BlogPost({ params }: {params: Promise<{ slug: string }>}
       <h1>{post.title}</h1>
       <p className="text-sm text-gray-500">{post.date}</p>
       {post.image && (
-        <Image
-          src={`/images/${post.image}`}
-          alt={post.title}
-          className="my-4 rounded-md"
-        />
+        <div className="relative w-full sm:w-1/3 h-40 sm:h-auto">
+          <Image
+            src={post.image ? post.image : '/404-not-found.jpg'}
+            alt={post.title}
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
       )}
       <p>{post.content}</p>
       {post.tags && (

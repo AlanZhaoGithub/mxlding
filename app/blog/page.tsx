@@ -18,7 +18,7 @@ export default function BlogPage() {
           staticity={40}
         />
         <div className="pt-16 px-16">
-          <h2 className="text-3xl font-bold tracking-tight text-dark-text sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-dark-text md:text-4xl">
             Blog
           </h2>
           <p className="mt-4 text-dark-text-secondary">

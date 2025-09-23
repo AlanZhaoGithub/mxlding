@@ -17,7 +17,7 @@ export default function ProjectsPage() {
         quantity={200}
         staticity={40}
       />
-      <div className="pt-16 px-16">
+      <div className="pt-16 px-8 md:px-16">
         <h2 className="text-3xl font-bold tracking-tight text-dark-text sm:text-4xl">
           Projects
         </h2>
@@ -27,9 +27,9 @@ export default function ProjectsPage() {
         </p>
         <div className="w-full h-px my-10 bg-zinc-800" />
       </div>
-      <div className="grid grid-cols-1 p-4 gap-6 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 p-8 gap-8 justify-items-center">
         {projects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+          <ProjectCard key={project.slug} project={project}/>
         ))}
       </div>
     </div>
