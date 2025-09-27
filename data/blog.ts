@@ -34,6 +34,54 @@ const blogPosts: BlogPost[] = [
     date: '2025-09-15',
     tags: ['League of Legends']
   },
+  {
+    title: 'TailwindCSS Basics',
+    slug: 'tailwindcss-basi',
+    excerpt: 'A simple guide to using TailwindCSS effectively.',
+    content: 'Full content for TailwindCSS Basics post.',
+    date: '2025-09-15',
+    image: 'placeholder3.jpeg',
+  },
+  {
+    title: 'League of Legends Basics',
+    slug: 'league-ba',
+    excerpt: 'A simple guide to using TailwindCSS effectively.',
+    content: 'Full content for TailwindCSS Basics post.',
+    date: '2025-09-15',
+    tags: ['League of Legends']
+  },
+  {
+    title: 'TailwindCSS Basics',
+    slug: 'tailwindcss-ba',
+    excerpt: 'A simple guide to using TailwindCSS effectively.',
+    content: 'Full content for TailwindCSS Basics post.',
+    date: '2025-09-15',
+    image: 'placeholder3.jpeg',
+  },
+  {
+    title: 'League of Legends Basics',
+    slug: 'league-bas',
+    excerpt: 'A simple guide to using TailwindCSS effectively.',
+    content: 'Full content for TailwindCSS Basics post.',
+    date: '2025-09-15',
+    tags: ['League of Legends']
+  },
+  {
+    title: 'TailwindCSS Basics',
+    slug: 'tailwindcss-basic',
+    excerpt: 'A simple guide to using TailwindCSS effectively.',
+    content: 'Full content for TailwindCSS Basics post.',
+    date: '2025-09-15',
+    image: 'placeholder3.jpeg',
+  },
+  {
+    title: 'League of Legends Basics',
+    slug: 'league-basi',
+    excerpt: 'A simple guide to using TailwindCSS effectively.',
+    content: 'Full content for TailwindCSS Basics post.',
+    date: '2025-09-15',
+    tags: ['League of Legends']
+  },
 ];
 
 export default blogPosts;

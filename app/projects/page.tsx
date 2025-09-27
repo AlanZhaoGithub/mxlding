@@ -9,12 +9,12 @@ export default function ProjectsPage() {
       <Header></Header>
       <Particles
         className="absolute inset-0 -z-10 animate-pulse"
-        quantity={200}
+        quantity={100}
         staticity={10}
       />
       <Particles
         className="absolute inset-0 -z-12 animate-[spin_50s_ease-in-out_infinite]"
-        quantity={200}
+        quantity={100}
         staticity={40}
       />
       <div className="pt-16 px-8 md:px-16">
@@ -27,7 +27,7 @@ export default function ProjectsPage() {
         </p>
         <div className="w-full h-px my-10 bg-zinc-800" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 p-8 gap-8 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project}/>
         ))}

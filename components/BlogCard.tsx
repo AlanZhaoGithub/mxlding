@@ -13,7 +13,7 @@ export default function BlogCard({ post }: Props) {
       href={`/blog/${post.slug}`}
       className="
         flex flex-col sm:flex-row bg-dark-bg rounded-lg overflow-hidden
-        cursor-pointer shadow-md hover:shadow-lg w-full max-w-4xl
+        cursor-pointer shadow-md hover:shadow-lg w-full
         p-4">
         
         <div className="relative w-full sm:w-1/3 h-40 sm:h-auto">

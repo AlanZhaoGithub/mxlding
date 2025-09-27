@@ -40,9 +40,11 @@ export default function Particles({
 
   // -------------------- Canvas Resize --------------------
   const resizeCanvas = useCallback(() => {
-    if (!canvasRef.current || !canvasContainerRef.current || !context.current) return;
+    if (!canvasRef.current  || !context.current) return;
 
-    const { offsetWidth: w, offsetHeight: h } = canvasContainerRef.current;
+
+    const w = window.innerWidth;
+    const h = window.innerHeight;
     canvasSize.current = { w, h };
 
     canvasRef.current.width = w * dpr;
@@ -52,9 +54,7 @@ export default function Particles({
 
     context.current.setTransform(1, 0, 0, 1, 0, 0);
     context.current.scale(dpr, dpr);
-
     // Reset circles
-    circles.current = [];
   }, [dpr]);
 
   // -------------------- Circle Helpers --------------------
@@ -182,7 +182,7 @@ export default function Particles({
   }, [refresh, resizeCanvas, drawParticles]);
 
   return (
-    <div className={className} ref={canvasContainerRef} aria-hidden="true">
+    <div className={`${className} fixed inset-0 -z-10`} ref={canvasContainerRef} aria-hidden="true">
       <canvas ref={canvasRef} />
     </div>
   );
